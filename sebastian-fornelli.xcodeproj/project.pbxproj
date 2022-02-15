@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C400F1E627BC3C7D0022E0AD /* ManagersConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C400F1E527BC3C7D0022E0AD /* ManagersConstants.swift */; };
 		C42B442627BC2F7500FF0164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442527BC2F7500FF0164 /* AppDelegate.swift */; };
 		C42B442827BC2F7500FF0164 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442727BC2F7500FF0164 /* SceneDelegate.swift */; };
 		C42B442A27BC2F7500FF0164 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442927BC2F7500FF0164 /* ViewController.swift */; };
 		C42B442D27BC2F7500FF0164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42B442B27BC2F7500FF0164 /* Main.storyboard */; };
 		C42B442F27BC2F7900FF0164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42B442E27BC2F7900FF0164 /* Assets.xcassets */; };
 		C42B443227BC2F7900FF0164 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42B443027BC2F7900FF0164 /* LaunchScreen.storyboard */; };
+		C42B444527BC323900FF0164 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B444427BC323900FF0164 /* ServiceManager.swift */; };
+		C42B444727BC34BC00FF0164 /* UnsplashAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B444627BC34BC00FF0164 /* UnsplashAPIManager.swift */; };
+		C4AA439427BC38C500130D3A /* UnsplashResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA439227BC38C500130D3A /* UnsplashResponseModel.swift */; };
+		C4AA439527BC38C500130D3A /* UnsplashPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA439327BC38C500130D3A /* UnsplashPhotoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C400F1E527BC3C7D0022E0AD /* ManagersConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersConstants.swift; sourceTree = "<group>"; };
 		C42B442227BC2F7500FF0164 /* sebastian-fornelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sebastian-fornelli.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42B442527BC2F7500FF0164 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C42B442727BC2F7500FF0164 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		C42B442E27BC2F7900FF0164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42B443127BC2F7900FF0164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42B443327BC2F7900FF0164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C42B444427BC323900FF0164 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		C42B444627BC34BC00FF0164 /* UnsplashAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPIManager.swift; sourceTree = "<group>"; };
+		C4AA439227BC38C500130D3A /* UnsplashResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsplashResponseModel.swift; sourceTree = "<group>"; };
+		C4AA439327BC38C500130D3A /* UnsplashPhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,23 +66,16 @@
 		C42B442427BC2F7500FF0164 /* sebastian-fornelli */ = {
 			isa = PBXGroup;
 			children = (
+				C42B444227BC320B00FF0164 /* Services */,
 				C42B443C27BC2FAF00FF0164 /* ViewModels */,
 				C42B443B27BC2FA700FF0164 /* Views */,
 				C42B443A27BC2F9E00FF0164 /* ViewControllers */,
-				C42B443927BC2F9700FF0164 /* Services */,
 				C42B442527BC2F7500FF0164 /* AppDelegate.swift */,
 				C42B442727BC2F7500FF0164 /* SceneDelegate.swift */,
 				C42B442E27BC2F7900FF0164 /* Assets.xcassets */,
 				C42B443327BC2F7900FF0164 /* Info.plist */,
 			);
 			path = "sebastian-fornelli";
-			sourceTree = "<group>";
-		};
-		C42B443927BC2F9700FF0164 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		C42B443A27BC2F9E00FF0164 /* ViewControllers */ = {
@@ -97,6 +100,34 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C42B444227BC320B00FF0164 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C4AA439127BC38C500130D3A /* Models */,
+				C42B444327BC321300FF0164 /* Managers */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C42B444327BC321300FF0164 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C42B444427BC323900FF0164 /* ServiceManager.swift */,
+				C42B444627BC34BC00FF0164 /* UnsplashAPIManager.swift */,
+				C400F1E527BC3C7D0022E0AD /* ManagersConstants.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C4AA439127BC38C500130D3A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4AA439227BC38C500130D3A /* UnsplashResponseModel.swift */,
+				C4AA439327BC38C500130D3A /* UnsplashPhotoModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,9 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42B444727BC34BC00FF0164 /* UnsplashAPIManager.swift in Sources */,
+				C4AA439527BC38C500130D3A /* UnsplashPhotoModel.swift in Sources */,
 				C42B442A27BC2F7500FF0164 /* ViewController.swift in Sources */,
 				C42B442627BC2F7500FF0164 /* AppDelegate.swift in Sources */,
 				C42B442827BC2F7500FF0164 /* SceneDelegate.swift in Sources */,
+				C400F1E627BC3C7D0022E0AD /* ManagersConstants.swift in Sources */,
+				C4AA439427BC38C500130D3A /* UnsplashResponseModel.swift in Sources */,
+				C42B444527BC323900FF0164 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
