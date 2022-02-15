@@ -13,6 +13,8 @@
 		C42B442D27BC2F7500FF0164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42B442B27BC2F7500FF0164 /* Main.storyboard */; };
 		C42B442F27BC2F7900FF0164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42B442E27BC2F7900FF0164 /* Assets.xcassets */; };
 		C42B443227BC2F7900FF0164 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42B443027BC2F7900FF0164 /* LaunchScreen.storyboard */; };
+		C42B443F27BC304A00FF0164 /* UnsplashPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B443E27BC304A00FF0164 /* UnsplashPhotoModel.swift */; };
+		C42B444127BC30F700FF0164 /* UnsplashResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B444027BC30F700FF0164 /* UnsplashResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C42B442E27BC2F7900FF0164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42B443127BC2F7900FF0164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42B443327BC2F7900FF0164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C42B443E27BC304A00FF0164 /* UnsplashPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoModel.swift; sourceTree = "<group>"; };
+		C42B444027BC30F700FF0164 /* UnsplashResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		C42B443927BC2F9700FF0164 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C42B443D27BC302300FF0164 /* Models */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -97,6 +102,15 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C42B443D27BC302300FF0164 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C42B443E27BC304A00FF0164 /* UnsplashPhotoModel.swift */,
+				C42B444027BC30F700FF0164 /* UnsplashResponseModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42B443F27BC304A00FF0164 /* UnsplashPhotoModel.swift in Sources */,
 				C42B442A27BC2F7500FF0164 /* ViewController.swift in Sources */,
 				C42B442627BC2F7500FF0164 /* AppDelegate.swift in Sources */,
+				C42B444127BC30F700FF0164 /* UnsplashResponseModel.swift in Sources */,
 				C42B442827BC2F7500FF0164 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
