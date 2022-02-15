@@ -56,15 +56,47 @@
 		C42B442427BC2F7500FF0164 /* sebastian-fornelli */ = {
 			isa = PBXGroup;
 			children = (
+				C42B443C27BC2FAF00FF0164 /* ViewModels */,
+				C42B443B27BC2FA700FF0164 /* Views */,
+				C42B443A27BC2F9E00FF0164 /* ViewControllers */,
+				C42B443927BC2F9700FF0164 /* Services */,
 				C42B442527BC2F7500FF0164 /* AppDelegate.swift */,
 				C42B442727BC2F7500FF0164 /* SceneDelegate.swift */,
-				C42B442927BC2F7500FF0164 /* ViewController.swift */,
-				C42B442B27BC2F7500FF0164 /* Main.storyboard */,
 				C42B442E27BC2F7900FF0164 /* Assets.xcassets */,
-				C42B443027BC2F7900FF0164 /* LaunchScreen.storyboard */,
 				C42B443327BC2F7900FF0164 /* Info.plist */,
 			);
 			path = "sebastian-fornelli";
+			sourceTree = "<group>";
+		};
+		C42B443927BC2F9700FF0164 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C42B443A27BC2F9E00FF0164 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C42B442927BC2F7500FF0164 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C42B443B27BC2FA700FF0164 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C42B443027BC2F7900FF0164 /* LaunchScreen.storyboard */,
+				C42B442B27BC2F7500FF0164 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C42B443C27BC2FAF00FF0164 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
