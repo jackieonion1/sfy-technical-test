@@ -12,6 +12,8 @@ class MainViewController: UIViewController {
     private var mainViewModel = MainViewModel()
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicatorView: UIView!
+    @IBOutlet weak var activityIndicatorViewHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,11 @@ class MainViewController: UIViewController {
             if success {
                 DispatchQueue.main.async {
                     self?.view.removeSpinner()
+                    if self?.mainViewModel.isReloading ?? false {
+                        self?.mainViewModel.isReloading = false
+                        self?.activityIndicatorView.isHidden = true
+                        self?.activityIndicatorViewHeight.constant = 0
+                    }
                     self?.collectionView.reloadData()
                 }
             } else {
@@ -47,6 +54,20 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (view.frame.width - 20) / 3
         return CGSize(width: width, height: width)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let height = scrollView.frame.size.height
+        let contentYOffset = scrollView.contentOffset.y
+        let distanceFromBottom = scrollView.contentSize.height - contentYOffset
+        if distanceFromBottom < height - 150 && contentYOffset > 0 {
+            if !mainViewModel.isReloading {
+                mainViewModel.isReloading = true
+                activityIndicatorViewHeight.constant = 150
+                activityIndicatorView.isHidden = false
+                mainViewModel.callService(query: "flowers", page: mainViewModel.page)
+            }
+        }
     }
 }
 
