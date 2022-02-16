@@ -11,9 +11,14 @@ class UnsplashAPIManager {
     public static let shared = UnsplashAPIManager()
     
     func getSearchPhotos(query: String,
+                         page: Int?,
                          success: @escaping ((UnsplashResponseModel) -> Void),
                          failure: @escaping (() -> Void)) {
-        ServiceManager.shared.callService(urlString: "\(ManagersConstants.unsplashBaseUrl)search/photos?query=\(query)", httpMethod: .get) {
+        var urlString = "\(ManagersConstants.unsplashBaseUrl)search/photos?query=\(query)&per_page=18"
+        if page != nil {
+            urlString.append("&page=\(String(describing: page))")
+        }
+        ServiceManager.shared.callService(urlString: urlString, httpMethod: .get) {
             (response: UnsplashResponseModel) in
             success(response)
         } failure: {

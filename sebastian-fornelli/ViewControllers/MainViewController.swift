@@ -8,14 +8,31 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    private var mainViewModel = MainViewModel()
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCollectionView()
+        self.view.showSpinner()
+        self.mainViewModel.imagesLoaded = { [weak self] (_, success) in
+            if success {
+                DispatchQueue.main.async {
+                    self?.view.removeSpinner()
+                    self?.collectionView.reloadData()
+                }
+            } else {
+                print("failure")
+            }
+        }
+    }
+    
+    private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(CollectionViewCell.self,
+        collectionView.register(UINib(nibName: CollectionViewCell.reuseIdentifier, bundle: nil),
                                 forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
     }
 }
@@ -36,7 +53,7 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 // MARK: UICollectionViewDataSource
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return mainViewModel.numberOfRows()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,7 +62,10 @@ extension MainViewController: UICollectionViewDataSource {
             for: indexPath) as? CollectionViewCell else {
                 return UICollectionViewCell()
             }
-        cell.configure()
+        guard let model = mainViewModel.getImage(index: indexPath.row) else {
+            return UICollectionViewCell()
+        }
+        cell.configure(model: model)
         return cell
     }
     
