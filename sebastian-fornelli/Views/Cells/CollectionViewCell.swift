@@ -9,13 +9,17 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
 
-    static let reuseIdentifier = "collectionViewCell"
+    @IBOutlet weak var imageView: UIImageView!
+    
+    static let reuseIdentifier = "CollectionViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configure() {
-        self.backgroundColor = .blue
+    func configure(model: UnsplashPhotoModel) {
+        if let imageUrl = URL(string: model.urls?[UrlType.thumb.rawValue] ?? "") {
+            imageView.load(url: imageUrl)
+        }
     }
 }
