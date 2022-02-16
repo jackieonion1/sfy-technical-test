@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C400F1E627BC3C7D0022E0AD /* ManagersConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C400F1E527BC3C7D0022E0AD /* ManagersConstants.swift */; };
+		C411F62C27BCF39F0009CE2D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C411F62A27BCF39F0009CE2D /* CollectionViewCell.swift */; };
+		C411F62D27BCF39F0009CE2D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C411F62B27BCF39F0009CE2D /* CollectionViewCell.xib */; };
 		C42B442627BC2F7500FF0164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442527BC2F7500FF0164 /* AppDelegate.swift */; };
 		C42B442827BC2F7500FF0164 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442727BC2F7500FF0164 /* SceneDelegate.swift */; };
 		C42B442A27BC2F7500FF0164 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442927BC2F7500FF0164 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		C400F1E527BC3C7D0022E0AD /* ManagersConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersConstants.swift; sourceTree = "<group>"; };
+		C411F62A27BCF39F0009CE2D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		C411F62B27BCF39F0009CE2D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		C42B442227BC2F7500FF0164 /* sebastian-fornelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sebastian-fornelli.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42B442527BC2F7500FF0164 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C42B442727BC2F7500FF0164 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C411F62927BCF37A0009CE2D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C411F62A27BCF39F0009CE2D /* CollectionViewCell.swift */,
+				C411F62B27BCF39F0009CE2D /* CollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C42B441927BC2F7500FF0164 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +102,7 @@
 		C42B443B27BC2FA700FF0164 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C411F62927BCF37A0009CE2D /* Cells */,
 				C42B443027BC2F7900FF0164 /* LaunchScreen.storyboard */,
 				C42B442B27BC2F7500FF0164 /* Main.storyboard */,
 			);
@@ -190,6 +204,7 @@
 			files = (
 				C42B443227BC2F7900FF0164 /* LaunchScreen.storyboard in Resources */,
 				C42B442F27BC2F7900FF0164 /* Assets.xcassets in Resources */,
+				C411F62D27BCF39F0009CE2D /* CollectionViewCell.xib in Resources */,
 				C42B442D27BC2F7500FF0164 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +218,7 @@
 			files = (
 				C42B444727BC34BC00FF0164 /* UnsplashAPIManager.swift in Sources */,
 				C4AA439527BC38C500130D3A /* UnsplashPhotoModel.swift in Sources */,
+				C411F62C27BCF39F0009CE2D /* CollectionViewCell.swift in Sources */,
 				C42B442A27BC2F7500FF0164 /* ViewController.swift in Sources */,
 				C42B442627BC2F7500FF0164 /* AppDelegate.swift in Sources */,
 				C42B442827BC2F7500FF0164 /* SceneDelegate.swift in Sources */,
@@ -357,6 +373,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "sebastian-fornelli/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -384,6 +401,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "sebastian-fornelli/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
