@@ -27,18 +27,38 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDP-5d-3eS">
+                                <rect key="frame" x="0.0" y="862" width="414" height="0.0"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="V0s-UY-3n0">
+                                        <rect key="frame" x="188.5" y="-18.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="V0s-UY-3n0" firstAttribute="centerX" secondItem="ZDP-5d-3eS" secondAttribute="centerX" id="AFa-D4-Q5f"/>
+                                    <constraint firstItem="V0s-UY-3n0" firstAttribute="centerY" secondItem="ZDP-5d-3eS" secondAttribute="centerY" id="QiP-G0-C3z"/>
+                                    <constraint firstAttribute="height" id="lig-SW-4lT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gLq-VH-pQo" secondAttribute="trailing" id="1GD-MT-Aco"/>
-                            <constraint firstItem="gLq-VH-pQo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fgw-Rt-0TD"/>
-                            <constraint firstItem="gLq-VH-pQo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m1U-6U-EYc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gLq-VH-pQo" secondAttribute="bottom" id="zoL-U0-foP"/>
+                            <constraint firstItem="ZDP-5d-3eS" firstAttribute="top" secondItem="gLq-VH-pQo" secondAttribute="bottom" id="8XW-y5-Lmf"/>
+                            <constraint firstItem="ZDP-5d-3eS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BMW-s7-jLj"/>
+                            <constraint firstItem="gLq-VH-pQo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CyO-KE-c1m"/>
+                            <constraint firstItem="gLq-VH-pQo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Eyj-qh-rWc"/>
+                            <constraint firstItem="ZDP-5d-3eS" firstAttribute="top" secondItem="gLq-VH-pQo" secondAttribute="bottom" id="Zx0-TT-7Gi"/>
+                            <constraint firstItem="ZDP-5d-3eS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hpx-9M-hFY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZDP-5d-3eS" secondAttribute="trailing" id="nUR-VB-Y4O"/>
+                            <constraint firstItem="gLq-VH-pQo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pf1-pC-bTE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nez-N4-7KT"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="ZDP-5d-3eS" id="WfX-s3-GGx"/>
+                        <outlet property="activityIndicatorViewHeight" destination="lig-SW-4lT" id="y4z-I4-xU7"/>
                         <outlet property="collectionView" destination="gLq-VH-pQo" id="R57-8Q-fmt"/>
                     </connections>
                 </viewController>

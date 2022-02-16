@@ -9,14 +9,18 @@ import Foundation
 
 class MainViewModel: BaseViewModel {
     var imagesLoaded: ((UnsplashResponseModel?, Bool) -> Void)?
-    var imageList: [UnsplashPhotoModel]?
+    var imageList: [UnsplashPhotoModel] = []
+    var isReloading = false
+    var page = 1
     
     override func callService(query: String, page: Int?) {
+        self.page += 1
         UnsplashAPIManager.shared.getSearchPhotos(query: query, page: page, success: { [weak self] response in
-            self?.imageList = response.results
+            self?.imageList.append(contentsOf: response.results ?? [])
             self?.handleResponse(response: response, success: true)
         }, failure: {
             self.handleResponse(response: nil, success: false)
+            self.page -= 1
         })
     }
     
@@ -27,10 +31,10 @@ class MainViewModel: BaseViewModel {
     }
     
     func numberOfRows() -> Int {
-        return self.imageList?.count ?? 0
+        return self.imageList.count
     }
     
     func getImage(index: Int) -> UnsplashPhotoModel? {
-        return self.imageList?[index]
+        return self.imageList[index]
     }
 }

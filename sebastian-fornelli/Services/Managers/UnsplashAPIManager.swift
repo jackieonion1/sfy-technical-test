@@ -15,7 +15,7 @@ class UnsplashAPIManager {
                          success: @escaping ((UnsplashResponseModel) -> Void),
                          failure: @escaping (() -> Void)) {
         var urlString = "\(ManagersConstants.unsplashBaseUrl)search/photos?query=\(query)&per_page=18"
-        if page != nil {
+        if let page = page {
             urlString.append("&page=\(String(describing: page))")
         }
         ServiceManager.shared.callService(urlString: urlString, httpMethod: .get) {
