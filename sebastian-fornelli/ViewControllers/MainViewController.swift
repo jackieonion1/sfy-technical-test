@@ -72,6 +72,9 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
         guard let vc = storyboard.instantiateViewController(withIdentifier: "detail") as? DetailViewController else { return }
+        if let imageModel = mainViewModel.getImage(index: indexPath.row) {
+            vc.detailViewModel = DetailViewModel(image: imageModel)
+        }
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
