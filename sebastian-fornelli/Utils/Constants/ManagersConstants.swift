@@ -18,3 +18,11 @@ enum HttpVerb: String {
     case put = "PUT"
     case delete = "DELETE"
 }
+
+enum UrlType: String {
+    case raw = "raw"
+    case full = "full"
+    case regular = "regular"
+    case small = "small"
+    case thumb = "thumb"
+}
