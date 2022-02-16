@@ -43,9 +43,15 @@ extension MainViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: CollectionViewCell.reuseIdentifier,
             for: indexPath) as? CollectionViewCell else {
-            return UICollectionViewCell()
-        }
+                return UICollectionViewCell()
+            }
         cell.configure()
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Detail", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "detail") as? DetailViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -10,6 +10,8 @@
 		C400F1E627BC3C7D0022E0AD /* ManagersConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C400F1E527BC3C7D0022E0AD /* ManagersConstants.swift */; };
 		C411F62C27BCF39F0009CE2D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C411F62A27BCF39F0009CE2D /* CollectionViewCell.swift */; };
 		C411F62D27BCF39F0009CE2D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C411F62B27BCF39F0009CE2D /* CollectionViewCell.xib */; };
+		C411F63327BCFE2E0009CE2D /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C411F63227BCFE2E0009CE2D /* Detail.storyboard */; };
+		C411F63527BCFE3A0009CE2D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C411F63427BCFE3A0009CE2D /* DetailViewController.swift */; };
 		C42B442627BC2F7500FF0164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442527BC2F7500FF0164 /* AppDelegate.swift */; };
 		C42B442827BC2F7500FF0164 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442727BC2F7500FF0164 /* SceneDelegate.swift */; };
 		C42B442A27BC2F7500FF0164 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442927BC2F7500FF0164 /* MainViewController.swift */; };
@@ -26,6 +28,8 @@
 		C400F1E527BC3C7D0022E0AD /* ManagersConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersConstants.swift; sourceTree = "<group>"; };
 		C411F62A27BCF39F0009CE2D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C411F62B27BCF39F0009CE2D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		C411F63227BCFE2E0009CE2D /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		C411F63427BCFE3A0009CE2D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C42B442227BC2F7500FF0164 /* sebastian-fornelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sebastian-fornelli.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42B442527BC2F7500FF0164 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C42B442727BC2F7500FF0164 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				C42B442927BC2F7500FF0164 /* MainViewController.swift */,
+				C411F63427BCFE3A0009CE2D /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				C411F62927BCF37A0009CE2D /* Cells */,
 				C42B443027BC2F7900FF0164 /* LaunchScreen.storyboard */,
 				C42B442B27BC2F7500FF0164 /* Main.storyboard */,
+				C411F63227BCFE2E0009CE2D /* Detail.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,6 +227,7 @@
 				C42B443227BC2F7900FF0164 /* LaunchScreen.storyboard in Resources */,
 				C42B442F27BC2F7900FF0164 /* Assets.xcassets in Resources */,
 				C411F62D27BCF39F0009CE2D /* CollectionViewCell.xib in Resources */,
+				C411F63327BCFE2E0009CE2D /* Detail.storyboard in Resources */,
 				C42B442D27BC2F7500FF0164 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +246,7 @@
 				C42B442627BC2F7500FF0164 /* AppDelegate.swift in Sources */,
 				C42B442827BC2F7500FF0164 /* SceneDelegate.swift in Sources */,
 				C400F1E627BC3C7D0022E0AD /* ManagersConstants.swift in Sources */,
+				C411F63527BCFE3A0009CE2D /* DetailViewController.swift in Sources */,
 				C4AA439427BC38C500130D3A /* UnsplashResponseModel.swift in Sources */,
 				C42B444527BC323900FF0164 /* ServiceManager.swift in Sources */,
 			);
