@@ -16,6 +16,7 @@
 		C411F63927BD0B4B0009CE2D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C411F63827BD0B4A0009CE2D /* BaseViewModel.swift */; };
 		C411F63B27BD0F280009CE2D /* SpinnerViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C411F63A27BD0F280009CE2D /* SpinnerViewControllerExtension.swift */; };
 		C411F63D27BD23770009CE2D /* ImageViewDownloaderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C411F63C27BD23760009CE2D /* ImageViewDownloaderExtension.swift */; };
+		C411F63F27BD28D50009CE2D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C411F63E27BD28D50009CE2D /* DetailViewModel.swift */; };
 		C42B442627BC2F7500FF0164 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442527BC2F7500FF0164 /* AppDelegate.swift */; };
 		C42B442827BC2F7500FF0164 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442727BC2F7500FF0164 /* SceneDelegate.swift */; };
 		C42B442A27BC2F7500FF0164 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B442927BC2F7500FF0164 /* MainViewController.swift */; };
@@ -38,6 +39,7 @@
 		C411F63827BD0B4A0009CE2D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		C411F63A27BD0F280009CE2D /* SpinnerViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewControllerExtension.swift; sourceTree = "<group>"; };
 		C411F63C27BD23760009CE2D /* ImageViewDownloaderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewDownloaderExtension.swift; sourceTree = "<group>"; };
+		C411F63E27BD28D50009CE2D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		C42B442227BC2F7500FF0164 /* sebastian-fornelli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sebastian-fornelli.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42B442527BC2F7500FF0164 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C42B442727BC2F7500FF0164 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				C411F63627BD0A5A0009CE2D /* MainViewModel.swift */,
 				C411F63827BD0B4A0009CE2D /* BaseViewModel.swift */,
+				C411F63E27BD28D50009CE2D /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				C4AA439427BC38C500130D3A /* UnsplashResponseModel.swift in Sources */,
 				C42B444527BC323900FF0164 /* ServiceManager.swift in Sources */,
 				C411F63727BD0A5A0009CE2D /* MainViewModel.swift in Sources */,
+				C411F63F27BD28D50009CE2D /* DetailViewModel.swift in Sources */,
 				C411F63D27BD23770009CE2D /* ImageViewDownloaderExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
